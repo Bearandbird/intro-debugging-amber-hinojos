@@ -43,7 +43,7 @@ function checkGuess() {
     if (guess < targetNumber) {
       tooLowMessage.style.display = '';
     } else {
-      tooHighMessage.style.display = '';
+      tooLowMessage.style.display = '';
     }
 
     const remainingAttempts = maxNumberOfAttempts - attempts;
@@ -63,7 +63,7 @@ function checkGuess() {
 }
 
 function hideAllMessages() {
-  for (let elementIndex = 0; elementIndex < messages.length; elementIndex++) {
+  for (let elementIndex = 0; elementIndex <= messages.length; elementIndex++) {
     messages[elementIndex].style.display = 'none';
   }
 }
@@ -81,7 +81,9 @@ function setup() {
   guessInput.disabled = false;
 
   hideAllMessages();
+  if (resetButton.style.display !== 'none') {
     resetButton.style.display = 'none';
+  }
 
 }
 

@@ -43,7 +43,7 @@ function checkGuess() {
     if (guess < targetNumber) {
       tooLowMessage.style.display = '';
     } else {
-      tooHighMessage.style.display = '';
+      tooLowMessage.style.display = '';
     }
 
     const remainingAttempts = maxNumberOfAttempts - attempts;
